@@ -6,61 +6,17 @@
  */
     const prizes = [
     
-    {
-        text: "空",
+  /*  {
+        text: "实例",
         color: "rgb(255,255,255)",
         reaction: "laughing"
       },
-    { 
-      text: "某不科学的一方通行",
-      color: "rgb(135,206,235)",
-      reaction: "shocked"
-    },
-    {
-        text: "空",
+           */
+  {
+        text: "联系管理员加入",
         color: "rgb(255,255,255)",
         reaction: "laughing"
       },
-    { 
-      text: "宽带老板",
-      color: "rgb(255,165,0)",
-      reaction: "shocked" 
-    },
-    {
-        text: "空",
-        color: "rgb(255,255,255)",
-        reaction: "dancing"
-    },
-    {
-      text: "炮",
-      color: "rgb(60,179,113)",
-      reaction: "shocked"
-    },
-    {
-        text: "空",
-        color: "rgb(255,255,255)",
-        reaction: "laughing"
-      },
-    {
-      text: "YarnXian（假的）",
-      color: "rgb(175,238,238)",
-      reaction: "dancing"
-    },
-
-    {
-        text: "空",
-        color: "rgb(255,255,255)",
-        reaction: "laughing"
-      },
-      
-    
-      {
-        text: "桔子Orange",
-          color: "rgb(178,34,34)",
-          reaction: "dancing"
-        },
-  ];
-  
   const wheel = document.querySelector(".deal-wheel");
   const spinner = wheel.querySelector(".spinner");
   const trigger = wheel.querySelector(".btn-spin");
