@@ -13,10 +13,17 @@
       },
            */
   {
-        text: "联系管理员加入",
+        text: "一方通行",
         color: "rgb(255,255,255)",
         reaction: "laughing"
       },
+
+ {
+        text: "线",
+        color: "rgb(255,255,255)",
+        reaction: "laughing"
+      },
+
   const wheel = document.querySelector(".deal-wheel");
   const spinner = wheel.querySelector(".spinner");
   const trigger = wheel.querySelector(".btn-spin");
