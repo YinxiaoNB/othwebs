@@ -131,7 +131,11 @@ body {
     cursor: progress;
     opacity: 0.25;
 }
-
+/*personal*/
+.peradd{
+    border: 2px solid #8AC007;
+    background: #8AC007;
+}
 /* Spinning animation */
 .is-spinning .spinner {
     transition: transform 8s cubic-bezier(0.1, -0.01, 0, 1);
