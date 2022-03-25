@@ -13,14 +13,34 @@
       },
            */
         {
-        text: "一方通行",
-        color: "rgb(255,255,255)",
+        text: "牛马",
+        color: "rgb(152,245,255)",
         reaction: "laughing"
       },
 
         {
-        text: "线",
-        color: "rgb(255,255,255)",
+        text: "傻逼",
+        color: "rgb(102,139,139)",
+        reaction: "laughing"
+      },
+        {
+        text: "阮某寒",
+        color: "rgb(0,139,139)",
+        reaction: "laughing"
+      },
+        {
+        text: "小逼崽子",
+        color: "rgb(0,134,139)",
+        reaction: "laughing"
+      },
+                {
+        text: "大逼崽子",
+        color: "rgb(151,255,255)",
+        reaction: "laughing"
+      },
+                {
+        text: "帅哥",
+        color: "rgb(82,139,139)",
         reaction: "laughing"
       },
 ];
