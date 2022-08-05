@@ -13,33 +13,33 @@
       },
            */
         {
-        text: "牛马",
+        text: "A",
         color: "rgb(152,245,255)",
         reaction: "laughing"
       },
 
         {
-        text: "傻逼",
+        text: "B",
         color: "rgb(102,139,139)",
         reaction: "laughing"
       },
         {
-        text: "阮某寒",
+        text: "C",
         color: "rgb(0,139,139)",
         reaction: "laughing"
       },
         {
-        text: "小逼崽子",
+        text: "D",
         color: "rgb(0,134,139)",
         reaction: "laughing"
       },
                 {
-        text: "大逼崽子",
+        text: "E",
         color: "rgb(151,255,255)",
         reaction: "laughing"
       },
                 {
-        text: "帅哥",
+        text: "F",
         color: "rgb(82,139,139)",
         reaction: "laughing"
       },
