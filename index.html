@@ -164,7 +164,7 @@
 
     <script src="./jquery-3.6.0.js"></script>
     <script>
-        alert("请在25秒内完成");
+       // alert("请在25秒内完成");
         //生成牌阵
         var boxwidth = 8;
         for (var i=1; i<=boxwidth ;i++) {
@@ -223,7 +223,7 @@
             }
         }
         var edjs=document.getElementsByTagName('div')[0];
-        var time=25;
+        var time=document.querySelector("input");
         setInterval(function(){
             time--;
             //edjs.innerHTML=time;
