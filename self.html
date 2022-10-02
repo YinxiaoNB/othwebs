@@ -222,11 +222,12 @@
             }
         }
         var edjs=document.getElementsByTagName('div')[0];
-        var time=prompt("时间","40");
+        var time=prompt("时间（单位：秒）","40");
         setInterval(function(){
             time--;
             //edjs.innerHTML=time;
             if(time<=0){
+                time=999
                 alert("时间到");
                 window.location.href='1.html';
             }
