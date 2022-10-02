@@ -171,7 +171,7 @@
 
     <script src="./jquery-3.6.0.js"></script>
     <script>
-        alert("请在40秒内完成");
+        alert("请在30秒内完成");
         //生成牌阵
         var boxwidth = 8;
         for (var i=1; i<=boxwidth ;i++) {
@@ -230,7 +230,7 @@
             }
         }
         var edjs=document.getElementsByTagName('div')[0];
-        var time=40;
+        var time=30;
         setInterval(function(){
             time--;
             //edjs.innerHTML=time;
@@ -290,7 +290,7 @@
                 },700)
 
                 //判断是否输了
-                if (suzu.length == 7) {
+                if (suzu.length ＞ 7) {
                     console.log("输了");
                     window.location.href='1.html';
                 }
