@@ -137,7 +137,7 @@
         .img14 {
             background-image: url(2img/14.png);
         }
-	    new{
+	    new {
 		    
             background: #3b92c4;
             width: 100px;
@@ -155,7 +155,7 @@
             <source src="bgm.mp3" type="audio/mpeg">
         </audio>
         <a href="index.html">
-	<button id="new">重开</button>
+	<button id="new">返回</button>
 </a>
         <p id="text1">Level-2</p>
         <div class="logo"></div>
@@ -176,7 +176,7 @@
 
     <script src="./jquery-3.6.0.js"></script>
     <script>
-    alert("难度飙升，时间不限，问号为随机牌，不代表相同的图案");
+    alert("难度飙升，限时一分半，问号为随机牌，不代表相同的图案");
         //生成牌阵
         var boxwidth = 8;
         for (var i=1; i<=boxwidth ;i++) {
@@ -223,16 +223,16 @@
                 case "14": $(this).addClass("img14"); break;
             }
         }
-        //var edjs=document.getElementsByTagName('div')[0];
-        //var time=40;
-        //setInterval(function(){
-           // time--;
-            //edjs.innerHTML=time;
-           // if(time<=0){
-             //   alert("时间到");
-              //  window.location.href='1.html';
-            //}
-        //}, 1000);
+        var edjs=document.getElementsByTagName('div')[0];
+        var time=90;
+        setInterval(function(){
+            time--;
+            edjs.innerHTML=time;
+            if(time<=0){
+              alert("时间到");
+               window.location.href='1.html';
+            }
+        }, 1000);
         document.onselectstart = function(){
             return false;
         }
