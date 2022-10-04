@@ -176,8 +176,6 @@
 
     <script src="./jquery-3.6.0.js"></script>
     <script>
-    //alert("难度飙升，时间不限，问号为随机牌，不代表相同的图案");
-        //生成牌阵
         var boxwidth = 8;
         for (var i=1; i<=boxwidth ;i++) {
             $(".playbox").append("<div class='hang' id='hang"+i+"'></div>");
@@ -191,7 +189,6 @@
             $(".hang:nth-child(4)>.em,.hang:nth-child(5)>.em").eq(Math.ceil(Math.random()*(15-i))).attr("class","card").html(i);
             $(".hang:nth-child(6)>.em,.hang:nth-child(7)>.em").eq(Math.ceil(Math.random()*(15-i))).attr("class","card").html(i);
         }
-        //在剩下22个格里前21个格子，放入7组每组3个的牌
         for(var i=0;i<6;i++){
             var rannum = Math.ceil(Math.random()*14);
             $(".em").eq(0).attr("class","card").html(rannum);
@@ -199,12 +196,12 @@
             $(".em").eq(2).attr("class","card").html(rannum);
             console.log($(".em").length);
         }
+	    //凋零是逗比（彩蛋）
         var rannum2 = Math.ceil(Math.random()*14);
         $(".em").eq(0).attr("class","card").html(rannum2);
         $(".em").eq(0).attr("class","card").html(rannum2);
         $(".em").eq(0).attr("class","card").html(rannum2);
         $(".card").each(addpic);
-        //刷新图片的函数
         function addpic() {
             switch($(this).html()) {
                 case "1": $(this).addClass("img01"); break;
@@ -223,27 +220,13 @@
                 case "14": $(this).addClass("img14"); break;
             }
         }
-        //var edjs=document.getElementsByTagName('div')[0];
-        //var time=40;
-        //setInterval(function(){
-           // time--;
-            //edjs.innerHTML=time;
-           // if(time<=0){
-             //   alert("时间到");
-              //  window.location.href='1.html';
-            //}
-        //}, 1000);
         document.onselectstart = function(){
             return false;
         }
-
         var suzu = [];
         $(".card").click(function() {
             console.log($(this).html());
-            //点击的是牌，并且手牌还没填满
             if (($(this).attr("class") != "em") && ($(".nocard").length > 0)) {
-
-                //点击的牌加入数组，遇到没有的牌排后面，遇到已有牌插入到已有牌后面
                 if (suzu.indexOf($(this).html()) >= 0) {
                     console.log(suzu.indexOf($(this).html()));
                     suzu.splice(suzu.indexOf($(this).html())+1,0,$(this).html());
@@ -251,44 +234,29 @@
                     suzu.push($(this).html());
                 }
                 console.log(suzu);
-
-                //手牌区加一张牌，并依据数组刷新手牌区
                 $(".nocard").eq(0).attr("class","getcard");
                 $(".getcard").each(function(){
                     $(this).html(suzu[$(this).index()]);;
                 });
                 $(".getcard").attr("class","getcard");
                 $(".getcard").each(addpic);
-                //删掉被选的牌
                 $(this).html("").attr("class","em");
-
-                //判断是否要消除同样3张牌
                 var timer = setTimeout(function(){
                     for (var i=0; i<5; i++) {
-                        // console.log(suzu[i]);
                         if (suzu[i] && (suzu[i] == suzu[i+1]) && (suzu[i] == suzu[i+2])) {
                             console.log("消除"+suzu[i]);
                             suzu.splice(i,3);
-                            //消除数据3张牌后刷新手牌区
                             $(".getcard").eq($(".getcard").length-1).attr("class","nocard").html("");
                             $(".getcard").eq($(".getcard").length-1).attr("class","nocard").html("");
                             $(".getcard").eq($(".getcard").length-1).attr("class","nocard").html("");
                             $(".getcard").each(function(){
                                 $(this).html(suzu[$(this).index()]);
                             });
-                            //刷新手牌区图片
                             $(".getcard").attr("class","getcard");
                             $(".getcard").each(addpic);
                         }
                     }
                 },10)
-
-                //判断是否输了
-                /*if (suzu.length > 7) {
-                    console.log("输了");
-                    alert("槽位已满，游戏结束");
-                    window.location.href='1.html';
-                }*/
             }
         })
 
